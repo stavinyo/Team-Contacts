@@ -32,6 +32,7 @@ function query(filterBy) {
 
 
 function remove(contactId) {
+    console.log('hi :)')
     return storageService.remove(CONTACT_KEY, contactId)
 }
 
