@@ -21,6 +21,8 @@ export function App() {
 
                         <Route path="/contact" element={<ContactIndex />} />
                         <Route path="/contact/:contactId" element={<ContactDetails />} />
+
+                        
                     </Routes>
                 </section>
             </Router>
