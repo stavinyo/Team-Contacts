@@ -1,7 +1,16 @@
+import { ContactPreview } from "./ContactPreview.jsx"
 
-
-export function ContactList() {
-    return <section className="contact-list-container">
-        <h1>Welcome to Contact List</h1>
-    </section>
+export function ContactList({ contacts }) {
+    if (!contacts) return <div>Loading...</div>
+    return (
+        <section className="contacts-list-container">
+            <ul>
+                {contacts.map(contact =>
+                    <li key={contact._id}>
+                        <ContactPreview contact={contact} />
+                    </li>
+                )}
+            </ul>
+        </section >
+    )
 }
