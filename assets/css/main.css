@@ -11,3 +11,6 @@
 @import './views/home.css';
 
 /* Cmps */
+
+@import './cmps/AppHeader.css';
+
