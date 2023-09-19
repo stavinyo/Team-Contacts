@@ -11,28 +11,13 @@ export const contactService = {
     getEmptyContact
 }
 
-function query(filterBy) {
+function query() {
     return storageService.query(CONTACT_KEY)
-        .then(contacts => {
-            if (filterBy.title) {
-                contacts = contacts.filter(contact =>
-                    contact.title.toLowerCase()
-                        .includes(filterBy.title.toLowerCase()))
-            }
-            if (filterBy.status === 'active') {
-                contacts = contacts.filter(contact => contact.doneAt !== null)
-            }
-            else if (filterBy.status === 'done') {
-                contacts = contacts.filter(contact => contact.doneAt === null)
-            }
-            return contacts
-        })
 }
 
 
 
 function remove(contactId) {
-    console.log('hi :)')
     return storageService.remove(CONTACT_KEY, contactId)
 }
 
@@ -79,7 +64,8 @@ function _createContacts() {
 
 function getEmptyContact() {
     return {
-        fullname: "",
+        firstName: "",
+        lastName: '',
         createdAt: Date.now(),
         email: '',
         phone: ''
