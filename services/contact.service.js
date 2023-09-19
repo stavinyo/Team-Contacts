@@ -8,14 +8,17 @@ export const contactService = {
     query,
     remove,
     save,
-    getEmptyContact
+    getEmptyContact,
+    get
 }
 
 function query() {
     return storageService.query(CONTACT_KEY)
 }
 
-
+function get(contactId){
+    return storageService.get(CONTACT_KEY, contactId)
+}
 
 function remove(contactId) {
     return storageService.remove(CONTACT_KEY, contactId)
