@@ -7,6 +7,7 @@ import { AppHeader } from './cmps/AppHeader.jsx'
 import { About } from './views/About.jsx'
 import { Home } from './views/Home.jsx'
 import { ContactIndex } from './views/ContactIndex.jsx'
+import { ContactDetails } from './cmps/ContactDetails.jsx'
 
 export function App() {
     return (
@@ -18,6 +19,7 @@ export function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<ContactIndex />} />
+                        <Route path="/contact/:contactId" element={<ContactDetails />} />
                     </Routes>
                 </section>
             </Router>
