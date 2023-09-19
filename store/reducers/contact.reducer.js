@@ -1,4 +1,4 @@
-export const SET_CONTACT = 'SET_CONTACT'
+export const SET_CONTACTS = 'SET_CONTACTS'
 
 const initialState = {
     contacts: [],
@@ -6,11 +6,12 @@ const initialState = {
 }
 
 export function contactReducer(state = initialState, action = {}) {
-    let contact
+    let contacts
+    console.log('action.type')
     switch (action.type) {
 
-        case SET_CONTACT:
-            return { ...state, contact: action.contact }
+        case SET_CONTACTS:
+            return { ...state, contacts: action.contacts }
 
         default:
             return state
