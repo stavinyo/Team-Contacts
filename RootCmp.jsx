@@ -19,8 +19,9 @@ export function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<ContactIndex />} />
+                        {/* <Route path="/contact/:contactId" element={<ContactDetails />} /> */}
                         <Route path="/contact/:contactId" element={<ContactDetails />} />
-                        
+
                     </Routes>
                 </section>
             </Router>
