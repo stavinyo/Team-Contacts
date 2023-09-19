@@ -10,3 +10,4 @@ export const store = createStore(rootReducer, composeEnhancers())
 
 
 window.gStore = store
+console.log('hi batel and stav !')
