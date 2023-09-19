@@ -8,7 +8,8 @@ export const contactService = {
     query,
     remove,
     save,
-    getEmptyContact
+    getEmptyContact,
+    get
 }
 
 function query(filterBy) {
@@ -29,7 +30,9 @@ function query(filterBy) {
         })
 }
 
-
+function get(contactId){
+    return storageService.get(CONTACT_KEY, contactId)
+}
 
 function remove(contactId) {
     console.log('hi :)')
